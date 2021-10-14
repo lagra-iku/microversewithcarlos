@@ -3,3 +3,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+#survey{
+  border-radius: 25px;
+  box-shadow: rgba(58, 58, 158, 0.8);
+}

@@ -5,29 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="main container text-center pt-3 text-white">
+    <div class="main container text-center pt-5 text-white">
         <h1 id="title">Microverse Trial Survey Form</h1>
         <p id="description">This is a trial survey form to get user data.</p>
     </div>
-    <div class="container bg-dark text-white p-3 my-3">
+    <div class="container bg-secondary text-white p-5 my-5" id="survey">
         <form id="survey-form" class="form-group" action="/action_page.php">
-            <label for="name" class="mr-sm-2">Name:</label>
+            <label for="name" class="mr-sm-2 pt-3">Name:</label>
             <input type="name" class="form-control mb-2 mr-sm-2" placeholder="Enter name" id="name-label">
-            <label for="email" class="mr-sm-2">Email address:</label>
+            <label for="email" class="mr-sm-2 pt-3">Email address:</label>
             <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter email" id="email-label">
-            <div class="form-group">
-                <label id="number-label" for="number">Age</label>
-                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Input Age">
+            <label id="number-label" for="number" class="mr-sm-2 pt-3">Age</label>
+            <input type="number" name="age" id="number" min="10" max="99" class="form-control mb-2" placeholder="Input Age">
+            <div class="form-group pt-3">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown" name="role" class="form-control" required="">
+                  <option disabled="" selected="" value="">Select current role</option>
+                  <option value="student">Student</option>
+                  <option value="job">Full Time Job</option>
+                  <option value="learner">Full Time Learner</option>
+                  <option value="preferNo">Prefer not to say</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
-            <div class="form-check mb-2 mr-sm-2">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+              <p class="pt-3">Would you recomend Microverse to your friends?</p>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">Yes, It's Amazing
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">Maybe
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio" >Never!!
+                </label>
+              </div>
+              <p class="pt-3">What would you like see improved? (Select all that apply)</p>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">Collaborating Hours
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">Programming languages offered
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="" >Data visualizations
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="" >Back End Projects
+                </label>
+              </div>
+              <div class="form-group pt-3">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success btn-lg mb-2 pt-3">Submit</button>
+
           </form>
     </div>
 </body>
