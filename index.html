@@ -15,12 +15,12 @@
     </div>
     <div class="container bg-secondary text-white p-5 my-5" id="survey">
         <form id="survey-form" class="form-group" action="/action_page.php">
-            <label for="name" class="mr-sm-2 pt-3">Name:</label>
-            <input type="name" class="form-control mb-2 mr-sm-2" placeholder="Enter name" id="name-label">
-            <label for="email" class="mr-sm-2 pt-3">Email address:</label>
-            <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter email" id="email-label">
+            <label for="name" id="name-label" class="mr-sm-2 pt-3">Name:</label>
+            <input type="name" id="name" placeholder="Enter name" class="form-control mb-2 mr-sm-2"  required>
+            <label for="email" id="email-label" class="mr-sm-2 pt-3">Email address:</label>
+            <input type="email" id="email" placeholder="Enter email" class="form-control mb-2 mr-sm-2" required >
             <label id="number-label" for="number" class="mr-sm-2 pt-3">Age</label>
-            <input type="number" name="age" id="number" min="10" max="99" class="form-control mb-2" placeholder="Input Age">
+            <input type="number" name="age" id="number" placeholder="Input Age" min="10" max="99" class="form-control mb-2" required >
             <div class="form-group pt-3">
                 <p>Which option best describes your current role?</p>
                 <select id="dropdown" name="role" class="form-control" required="">
@@ -35,45 +35,45 @@
               <p class="pt-3">Would you recomend Microverse to your friends?</p>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Yes, It's Amazing
+                  <input type="radio" class="form-check-input" name="optradio" value="Yes, It's Amazing">Yes, It's Amazing
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Maybe
+                  <input type="radio" class="form-check-input" name="optradio" value="Maybe">Maybe
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio" >Never!!
+                  <input type="radio" class="form-check-input" name="optradio" value="Never" >Never!!
                 </label>
               </div>
               <p class="pt-3">What would you like see improved? (Select all that apply)</p>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="">Collaborating Hours
+                  <input type="checkbox" class="form-check-input" value="Collaborating Hours">Collaborating Hours
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="">Programming languages offered
+                  <input type="checkbox" class="form-check-input" value="Programming languages offered">Programming languages offered
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="" >Data visualizations
+                  <input type="checkbox" class="form-check-input" value="Data visualizations" >Data visualizations
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" value="" >Back End Projects
+                  <input type="checkbox" class="form-check-input" value="Back End Projects" >Back End Projects
                 </label>
               </div>
               <div class="form-group pt-3">
                 <label for="comment">Comment:</label>
                 <textarea class="form-control" rows="5" id="comment"></textarea>
               </div>
-              <button type="submit" class="btn btn-success btn-lg mb-2 pt-3">Submit</button>
+              <button id="submit" type="submit" class="btn btn-success btn-lg mb-2 pt-3">Submit</button>
 
           </form>
     </div>
